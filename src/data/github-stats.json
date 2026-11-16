@@ -1,0 +1,53 @@
+{
+  "atualizado_em": "2026-11-16",
+  "contas": [
+    "Joao-Vitor2",
+    "Joojizitos65"
+  ],
+  "totais": {
+    "repositorios": 51,
+    "por_conta": {
+      "Joao-Vitor2": {
+        "repositorios": 3,
+        "com_linguagem": 2
+      },
+      "Joojizitos65": {
+        "repositorios": 48,
+        "com_linguagem": 39
+      }
+    },
+    "linguagens": 5
+  },
+  "linguagens": [
+    {
+      "linguagem": "JavaScript",
+      "Joao-Vitor2": 0,
+      "Joojizitos65": 18,
+      "total": 18
+    },
+    {
+      "linguagem": "Python",
+      "Joao-Vitor2": 2,
+      "Joojizitos65": 9,
+      "total": 11
+    },
+    {
+      "linguagem": "TypeScript",
+      "Joao-Vitor2": 0,
+      "Joojizitos65": 6,
+      "total": 6
+    },
+    {
+      "linguagem": "HTML",
+      "Joao-Vitor2": 0,
+      "Joojizitos65": 5,
+      "total": 5
+    },
+    {
+      "linguagem": "Jupyter Notebook",
+      "Joao-Vitor2": 0,
+      "Joojizitos65": 1,
+      "total": 1
+    }
+  ]
+}
