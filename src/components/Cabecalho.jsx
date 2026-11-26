@@ -1,7 +1,9 @@
+import { perfil } from "../data/conteudo.js";
+
 const links = [
   { href: "#projetos", texto: "Projetos" },
   { href: "#faculdade", texto: "Faculdade" },
-  { href: "#github", texto: "GitHub" },
+  { href: "#github", texto: "Números" },
   { href: "#trajetoria", texto: "Trajetória" },
   { href: "#contato", texto: "Contato" },
 ];
@@ -20,6 +22,11 @@ export default function Cabecalho() {
                 <a href={l.href}>{l.texto}</a>
               </li>
             ))}
+            <li>
+              <a className="menu__github" href={perfil.githubPrincipal.url} target="_blank" rel="noreferrer">
+                {perfil.githubPrincipal.conta}
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

@@ -3,38 +3,46 @@ import IconeSeta from "./IconeSeta.jsx";
 
 function CartaoProjeto({ p }) {
   return (
-    <article className="cartao projeto">
-      <header className="projeto__topo">
-        <p className="projeto__tag">{p.tag}</p>
-        <h3>{p.nome}</h3>
-        <p className="projeto__conta">GitHub: {p.conta}</p>
-      </header>
+    <article className="caso">
+      <aside className="prova">
+        <p className="prova__valor">{p.prova.valor}</p>
+        <p className="prova__rotulo">{p.prova.rotulo}</p>
+      </aside>
 
-      <p>{p.resumo}</p>
+      <div className="caso__corpo">
+        <header className="projeto__topo">
+          <p className="projeto__tag">{p.tag}</p>
+          <h3>{p.nome}</h3>
+        </header>
 
-      <ul className="lista">
-        {p.destaques.map((d) => (
-          <li key={d}>{d}</li>
-        ))}
-      </ul>
+        <p>{p.resumo}</p>
 
-      <ul className="tags" aria-label="Tecnologias usadas">
-        {p.stack.map((s) => (
-          <li key={s}>{s}</li>
-        ))}
-      </ul>
+        <ul className="lista">
+          {p.destaques.map((d) => (
+            <li key={d}>{d}</li>
+          ))}
+        </ul>
 
-      <footer className="projeto__rodape">
-        {p.privado ? (
-          <p className="aviso-privado">
-            Repositório privado. Posso mostrar o código e o funcionamento em uma conversa.
-          </p>
-        ) : (
-          <a className="link-seta" href={p.repo} target="_blank" rel="noreferrer">
-            Ver código no GitHub <IconeSeta />
-          </a>
-        )}
-      </footer>
+        <ul className="tags" aria-label="Tecnologias usadas">
+          {p.stack.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
+
+        <footer className="projeto__rodape">
+          <p className="prova__origem">{p.prova.origem}</p>
+          {p.privado ? (
+            <p className="aviso-privado">
+              Repositório privado na conta {p.conta}. Mostro o código e o sistema funcionando numa
+              conversa.
+            </p>
+          ) : (
+            <a className="link-seta" href={p.repo} target="_blank" rel="noreferrer">
+              Ver código em {p.conta} <IconeSeta />
+            </a>
+          )}
+        </footer>
+      </div>
     </article>
   );
 }
@@ -45,10 +53,10 @@ export default function Projetos() {
       <div className="container">
         <h2 id="titulo-projetos">Projetos em destaque</h2>
         <p className="secao__intro">
-          Dois sistemas completos com backend, banco e frontend, e dois projetos de dados feitos na
-          faculdade.
+          Cada ficha abre com um fato que dá para conferir. Sem Patrão e Pizzaria Ávalos seguem em
+          repositório privado. Datathon e DATAMOL têm código público.
         </p>
-        <div className="grade grade--2">
+        <div className="casos">
           {projetos.map((p) => (
             <CartaoProjeto key={p.id} p={p} />
           ))}
