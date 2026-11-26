@@ -13,7 +13,8 @@ export default function GraficoLinguagens() {
         <h2 id="titulo-github">GitHub em números</h2>
         <p className="secao__intro">
           {totais.repositorios} repositórios públicos nas duas contas, em {totais.linguagens}{" "}
-          linguagens principais. Os projetos privados não entram na conta.
+          linguagens principais. A conta do portfólio é Joao-Vitor2. Joojizitos65 guarda os
+          trabalhos da faculdade. Os repositórios privados não entram na conta.
         </p>
 
         <div className="cartao grafico">

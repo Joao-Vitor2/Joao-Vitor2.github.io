@@ -12,13 +12,20 @@ export default function Hero() {
           <a className="botao botao--primario" href="#projetos">
             Ver projetos
           </a>
-          <a className="botao" href={perfil.githubs[0].url} target="_blank" rel="noreferrer">
-            GitHub
+          <a className="botao" href={perfil.githubPrincipal.url} target="_blank" rel="noreferrer">
+            GitHub · {perfil.githubPrincipal.conta}
           </a>
           <a className="botao" href={perfil.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>
+        <p className="hero__conta-extra">
+          Os trabalhos da faculdade estão em{" "}
+          <a href={perfil.githubFaculdade.url} target="_blank" rel="noreferrer">
+            {perfil.githubFaculdade.conta}
+          </a>
+          .
+        </p>
 
         <ul className="conquistas" aria-label="Conquistas em competições">
           {conquistas.map((c) => (

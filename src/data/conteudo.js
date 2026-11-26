@@ -9,9 +9,17 @@ export const perfil = {
   email: "joaovitorlucasschmidt@gmail.com",
   linkedin:
     "https://www.linkedin.com/in/jo%C3%A3o-vitor-lucas-schmidt-495319306/",
+  githubPrincipal: {
+    conta: "Joao-Vitor2",
+    url: "https://github.com/Joao-Vitor2",
+  },
+  githubFaculdade: {
+    conta: "Joojizitos65",
+    url: "https://github.com/Joojizitos65",
+  },
   githubs: [
-    { conta: "Joojizitos65", url: "https://github.com/Joojizitos65" },
     { conta: "Joao-Vitor2", url: "https://github.com/Joao-Vitor2" },
+    { conta: "Joojizitos65", url: "https://github.com/Joojizitos65" },
   ],
 };
 
@@ -44,6 +52,11 @@ export const projetos = [
       "Login por cookie HttpOnly com proteção CSRF, auditoria de eventos e migrations com Alembic.",
     ],
     stack: ["FastAPI", "PostgreSQL", "Alembic", "Next.js", "TypeScript", "Docker"],
+    prova: {
+      valor: "HttpOnly",
+      rotulo: "sessão em cookie, com CSRF",
+      origem: "Lido no repositório crmAutonomos. O código continua privado.",
+    },
   },
   {
     id: "pizzaria-avalos",
@@ -59,6 +72,11 @@ export const projetos = [
       "Acesso por PIN com hash, limite de tentativas, backup com pg_dump e mais de 90 testes automatizados.",
     ],
     stack: ["FastAPI", "SQLAlchemy", "PostgreSQL", "React", "Vite", "MUI", "Render + Neon"],
+    prova: {
+      valor: "90+",
+      rotulo: "testes automatizados",
+      origem: "Há 94 funções test_ no repositório. O site publica “mais de 90”. O código continua privado.",
+    },
   },
   {
     id: "datathon",
@@ -75,6 +93,11 @@ export const projetos = [
       "Painel interativo de 8 abas e roteiro de pitch de 3 minutos.",
     ],
     stack: ["Python", "pandas", "Streamlit", "Plotly", "LLM", "HTML/CSS/JS"],
+    prova: {
+      valor: "413 MB",
+      rotulo: "do CAGED, em 295 municípios",
+      origem: "Repositório público, em equipe. O link abaixo abre o código.",
+    },
   },
   {
     id: "datamol",
@@ -90,6 +113,11 @@ export const projetos = [
       "Classificador em árvore de decisão, API REST em Flask com PostgreSQL e dashboard web.",
     ],
     stack: ["Python", "Flask", "PostgreSQL", "RegEx", "Multithreading", "JavaScript"],
+    prova: {
+      valor: "Público",
+      rotulo: "código no GitHub da faculdade",
+      origem: "O repositório tem um commit e o README aponta outro autor. A ficha não diz que o trabalho foi só meu.",
+    },
   },
 ];
 
@@ -135,9 +163,9 @@ export const experiencias = [
     empresa: "Intelbras",
     periodo: "02/2025 a 08/2025",
     itens: [
-      "Criei scripts de automação em Python que eliminaram um processo manual repetitivo.",
-      "Validei a gravação contínua de câmeras de segurança após interrupções técnicas.",
-      "Documentei metodologia e resultados dos testes em relatórios técnicos.",
+      "Automatizei em Python processos manuais repetitivos do time de backend, eliminando retrabalho.",
+      "Desenvolvi validações automáticas de gravação contínua de câmeras de segurança — detectando falhas após interrupções técnicas sem intervenção humana.",
+      "Produzi relatórios técnicos documentando metodologia, critérios e resultados dos testes.",
     ],
   },
   {
@@ -145,8 +173,8 @@ export const experiencias = [
     empresa: "Educat",
     periodo: "06/2024 a 12/2024",
     itens: [
-      "Identifiquei falhas e inconsistências no sistema da empresa.",
-      "Documentei o processo de testes e os problemas encontrados.",
+      "Mapeei falhas e inconsistências no sistema educacional da empresa, cobrindo fluxos críticos.",
+      "Documentei casos de teste e evidências de bugs, acelerando a triagem pela equipe de desenvolvimento.",
     ],
   },
 ];

@@ -137,6 +137,11 @@ code {
   color: var(--texto);
 }
 
+.menu__github {
+  color: var(--destaque);
+  font-weight: 700;
+}
+
 /* Hero */
 .hero {
   padding: clamp(3rem, 8vw, 6rem) 0 3rem;
@@ -168,7 +173,13 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin: 1.5rem 0 2rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.hero__conta-extra {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
 }
 
 .botao {
@@ -267,6 +278,69 @@ code {
   border: 1px solid var(--borda);
   border-radius: var(--raio);
   padding: 1.4rem;
+}
+
+.casos {
+  display: grid;
+  gap: 1rem;
+}
+
+.caso {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1.25rem;
+  transition: border-color 0.15s, transform 0.12s;
+}
+
+.caso:hover {
+  border-color: var(--destaque);
+  transform: translateY(-2px);
+}
+
+.projeto__topo {
+  margin-bottom: 0.4rem;
+}
+
+.caso__corpo {
+  min-width: 0;
+}
+
+.prova {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.9rem 0.85rem;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--borda);
+}
+
+.prova__valor {
+  margin: 0;
+  color: var(--ouro);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.prova__rotulo {
+  margin: 0;
+  color: var(--texto);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.prova__origem {
+  margin: 0 0 0.7rem;
+  color: var(--texto-suave);
+  font-size: 0.88rem;
 }
 
 .projeto {
@@ -447,6 +521,12 @@ code {
 
 .rodape p {
   margin: 0;
+}
+
+@media (max-width: 720px) {
+  .caso {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
