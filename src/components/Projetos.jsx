@@ -29,18 +29,40 @@ function CartaoProjeto({ p }) {
           ))}
         </ul>
 
+        {p.video && (
+          <div className="projeto__video">
+            <video
+              controls
+              preload="metadata"
+              aria-label={`Demonstração do ${p.nome}`}
+            >
+              <source src={p.video} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        )}
+
         <footer className="projeto__rodape">
           <p className="prova__origem">{p.prova.origem}</p>
-          {p.privado ? (
-            <p className="aviso-privado">
-              Repositório privado na conta {p.conta}. Mostro o código e o sistema funcionando numa
-              conversa.
-            </p>
-          ) : (
-            <a className="link-seta" href={p.repo} target="_blank" rel="noreferrer">
-              Ver código em {p.conta} <IconeSeta />
-            </a>
-          )}
+          <div className="projeto__links">
+            {p.site && (
+              <a className="link-seta" href={p.site} target="_blank" rel="noreferrer">
+                Ver sistema em produção <IconeSeta />
+              </a>
+            )}
+            {p.privado && !p.repo ? (
+              <p className="aviso-privado">
+                Repositório privado na conta {p.conta}. Mostro o código e o sistema funcionando numa
+                conversa.
+              </p>
+            ) : (
+              !p.privado && (
+                <a className="link-seta" href={p.repo} target="_blank" rel="noreferrer">
+                  Ver código em {p.conta} <IconeSeta />
+                </a>
+              )
+            )}
+          </div>
         </footer>
       </div>
     </article>

@@ -44,6 +44,8 @@ export const projetos = [
     tag: "SaaS · Em desenvolvimento",
     conta: "Joao-Vitor2",
     privado: true,
+    site: "https://sempatrao.site",
+    video: "/videos/sem-patrao-demo.mp4",
     resumo:
       "CRM para autônomos e pequenos negócios de serviços. Reúne cadastro de clientes, agenda, ordens de serviço, tarefas e financeiro em uma plataforma multi-tenant.",
     destaques: [

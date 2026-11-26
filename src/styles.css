@@ -372,6 +372,29 @@ code {
   padding-top: 0.75rem;
 }
 
+.projeto__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.projeto__video {
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  background: #000;
+}
+
+.projeto__video video {
+  width: 100%;
+  display: block;
+  max-height: 340px;
+  object-fit: contain;
+}
+
 .aviso-privado {
   color: var(--texto-suave);
   font-size: 0.9rem;
